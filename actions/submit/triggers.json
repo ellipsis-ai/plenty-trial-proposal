@@ -1,0 +1,7 @@
+[ {
+  "text" : "submit trial proposal",
+  "requiresMention" : true,
+  "isRegex" : false,
+  "caseSensitive" : false,
+  "triggerType" : "MessageSent"
+} ]

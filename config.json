@@ -1,0 +1,8 @@
+{
+  "name" : "Trial Proposal",
+  "exportId" : "JE-LjUfCRGiAXzoKYIAXJQ",
+  "icon" : "🔬",
+  "requiredAWSConfigs" : [ ],
+  "requiredOAuthApiConfigs" : [ ],
+  "requiredSimpleTokenApis" : [ ]
+}

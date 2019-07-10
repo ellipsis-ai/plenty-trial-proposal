@@ -1,0 +1,21 @@
+[ {
+  "exportId" : "RZjmSrxSRza83BZr4D3JSw",
+  "name" : "name",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "What's the name of this trial or trial series?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "jHuTLCi0QMmdPRg2vWnjog",
+  "name" : "sheetUrl",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "What is the value for `sheetUrl`?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+} ]
