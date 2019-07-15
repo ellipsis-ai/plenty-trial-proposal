@@ -1,15 +1,18 @@
-function(sheetUrl, ellipsis) {
-  const {Sheet} = ellipsis.require('ellipsis-gsheets@^0.0.1');
+function(sheetUrl, manager, ellipsis) {
+  const trackingSheet = require('tracking-sheet')(ellipsis);
+const EllipsisApi = require('ellipsis-api');
+const api = new EllipsisApi(ellipsis);
+const SlackUser = require('SlackUser');
 
-const trackingSheet = new Sheet(ellipsis, ellipsis.env.TRIAL_POLICY_PROGRESS_SHEET_ID);
-trackingSheet.get('Sheet1!A1:Z1000').then(rows => {
-  const matchIndex = rows.findIndex(ea => ea[1] === sheetUrl);
-  if (matchIndex > -1) {
-    trackingSheet.update(`Sheet1!D${matchIndex+1}:D${matchIndex+1}`, [[(new Date()).toString()]]).then(() => {
-      ellipsis.success(`Found it on row ${matchIndex}`);
-    })
+const usersMentioned = ellipsis.event.message ? ellipsis.event.message.usersMentioned : [];
+const managerSlackId = usersMentioned.filter(ea => `@${ea.userName}` == manager)[0].userIdForContext;
+const managerSlackUser = new SlackUser(managerSlackId, manager);
+trackingSheet.submit(sheetUrl, managerSlackUser).then(rowsUpdated => {
+  if (rowsUpdated > 0) {
+    const requesterSlackUser = new SlackUser(ellipsis.event.user.userIdForContext, `@${ellipsis.event.user.userName}`);
+    trackingSheet.requestApproval(sheetUrl, requesterSlackUser, managerSlackUser).then(ellipsis.success(`${manager} will be notified`));
   } else {
-    ellipsis.success("Can't find a matching proposal");
+    ellipsis.success(`Can't find a matching proposal for spreadsheet: ${sheetUrl}`);
   }
-})
+});
 }

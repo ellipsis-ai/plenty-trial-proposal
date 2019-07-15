@@ -1,4 +1,34 @@
 [ {
+  "exportId" : "ECB8SUy8Su-OWGZ5JkAFfA",
+  "name" : "sheetUrl",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "What is the value for `sheetUrl`?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "EnPlfft3SMiaKUUifjUhVg",
+  "name" : "sheetUrl",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "What is the value for `sheetUrl`?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "FRnGcT0fQa6TZuriupAPwQ",
+  "name" : "approver",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "What is the value for `approver`?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
   "exportId" : "RZjmSrxSRza83BZr4D3JSw",
   "name" : "name",
   "paramType" : {
@@ -9,6 +39,16 @@
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
+  "exportId" : "c-J1ilA-Tcqv3D4fibjSCA",
+  "name" : "approver",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "What is the value for `approver`?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
   "exportId" : "jHuTLCi0QMmdPRg2vWnjog",
   "name" : "sheetUrl",
   "paramType" : {
@@ -16,6 +56,36 @@
     "name" : "Text"
   },
   "question" : "What is the value for `sheetUrl`?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "mKSSojxnQRGg0na_SvdbQQ",
+  "name" : "manager",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "What's the Slack @handle of your manager? (they will need to sign off on this)",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "v9zWOe1uSpSJjd9wGbhr4Q",
+  "name" : "status",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "What is the value for `status`?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "yPRaKVIsTs-d0_b5wRBXnA",
+  "name" : "requester",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "What is the value for `requester`?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 } ]
