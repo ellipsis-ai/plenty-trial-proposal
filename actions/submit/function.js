@@ -9,7 +9,7 @@ const managerSlackId = usersMentioned.filter(ea => `@${ea.userName}` == manager)
 const managerSlackUser = new SlackUser(managerSlackId, manager);
 trackingSheet.submit(sheetUrl, managerSlackUser).then(rowsUpdated => {
   if (rowsUpdated > 0) {
-    const requesterSlackUser = new SlackUser(ellipsis.event.user.userIdForContext, `@${ellipsis.event.user.userName}`);
+    const requesterSlackUser = new SlackUser(ellipsis.event.user.userIdForContext, ellipsis.event.user.userName);
     trackingSheet.requestApproval(sheetUrl, requesterSlackUser, managerSlackUser).then(ellipsis.success(`${manager} will be notified`));
   } else {
     ellipsis.success(`Can't find a matching proposal for spreadsheet: ${sheetUrl}`);
