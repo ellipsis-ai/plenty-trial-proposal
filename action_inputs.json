@@ -20,12 +20,22 @@
   "isSavedForUser" : false
 }, {
   "exportId" : "FRnGcT0fQa6TZuriupAPwQ",
-  "name" : "approver",
+  "name" : "reviewerText",
   "paramType" : {
     "exportId" : "Text",
     "name" : "Text"
   },
-  "question" : "What is the value for `approver`?",
+  "question" : "What is the value for `reviewerText`?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "GG2LKxkNQlu6ZbSNVGxuFw",
+  "name" : "sheetUrl",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "What is the value for `sheetUrl`?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
@@ -39,13 +49,33 @@
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
-  "exportId" : "c-J1ilA-Tcqv3D4fibjSCA",
-  "name" : "approver",
+  "exportId" : "agWWEgNHQiyOuCS3Y4BIOg",
+  "name" : "reviewerText",
   "paramType" : {
     "exportId" : "Text",
     "name" : "Text"
   },
-  "question" : "What is the value for `approver`?",
+  "question" : "What is the value for `reviewerText`?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "c-J1ilA-Tcqv3D4fibjSCA",
+  "name" : "reviewerText",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "What is the value for `reviewerText`?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "e4_6CMzXQsKUeATgvyvAsA",
+  "name" : "sheetUrl",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "What is the value for `sheetUrl`?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
@@ -59,6 +89,16 @@
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
+  "exportId" : "jSz4kxp0SxauZ32gZQgDmQ",
+  "name" : "reason",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "What is the reason for rejecting?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
   "exportId" : "mKSSojxnQRGg0na_SvdbQQ",
   "name" : "manager",
   "paramType" : {
@@ -69,13 +109,13 @@
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
-  "exportId" : "v9zWOe1uSpSJjd9wGbhr4Q",
-  "name" : "status",
+  "exportId" : "uiZEufggQZ6j__LUNmIh2Q",
+  "name" : "reviewerText",
   "paramType" : {
     "exportId" : "Text",
     "name" : "Text"
   },
-  "question" : "What is the value for `status`?",
+  "question" : "What is the value for `reviewerText`?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
@@ -86,6 +126,16 @@
     "name" : "Text"
   },
   "question" : "What is the value for `requester`?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "ysEm9czCRu6LXfyK3Wd2yA",
+  "name" : "status",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "What is the value for `status`?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 } ]

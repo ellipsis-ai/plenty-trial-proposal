@@ -1,34 +1,32 @@
-function(requester, sheetUrl, approver, ellipsis) {
+function(requester, sheetUrl, reviewerText, ellipsis) {
   const SlackUser = require('SlackUser');
 const requesterSlackUser = SlackUser.fromCellText(requester);
-const approverSlackUser = SlackUser.fromCellText(approver);
+const reviewer = SlackUser.fromCellText(reviewerText);
 
-if (approverSlackUser) {
+if (reviewer) {
   ellipsis.success({ requesterLink: requesterSlackUser.link() }, {
     choices: [
       {
-        actionName: 'setApproval',
+        actionName: 'approve',
         label: 'Approve',
         args: [
-          { name: 'approver', value: approverSlackUser.cellText() },
-          { name: 'sheetUrl', value: sheetUrl },
-          { name: 'status', value: 'Approved' }
+          { name: 'reviewerText', value: reviewer.cellText() },
+          { name: 'sheetUrl', value: sheetUrl }
         ],
         allowOthers: true
       },
       {
-        actionName: 'setApproval',
+        actionName: 'reject',
         label: 'Reject',
         args: [
-          { name: 'approver', value: approverSlackUser.cellText() },
-          { name: 'sheetUrl', value: sheetUrl },
-          { name: 'status', value: 'Rejected' }
+          { name: 'reviewerText', value: reviewer.cellText() },
+          { name: 'sheetUrl', value: sheetUrl }
         ],
         allowOthers: true
       }
     ]
   });
 } else {
-  ellipsis.error("No approver!");
+  ellipsis.error("No reviewer!");
 }
 }

@@ -1,11 +1,11 @@
-function(approver, sheetUrl, status, ellipsis) {
+function(reviewerText, sheetUrl, reason, ellipsis) {
   const trackingSheet = require('tracking-sheet')(ellipsis);
 const EllipsisApi = require('ellipsis-api');
 const api = new EllipsisApi(ellipsis);
 const SlackUser = require('SlackUser');
-const approverSlackUser = SlackUser.fromCellText(approver);
+const reviewer = SlackUser.fromCellText(reviewerText);
 
-trackingSheet.approve(sheetUrl, approverSlackUser, status).then(rowsUpdated => {
+trackingSheet.setApproval(sheetUrl, reviewer, `Rejected: ${reason}`).then(rowsUpdated => {
   if (rowsUpdated > 0) {
     ellipsis.success(`Got it!`);
   } else {
