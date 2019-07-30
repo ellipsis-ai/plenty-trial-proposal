@@ -8,6 +8,9 @@ drive.copyFile(ellipsis.env.TRIAL_PROPOSAL_TEMPLATE_SHEET_ID).
     return drive.makeWritable(res.data.id).then(() => res.data.id);
   }).
   then(fileId => {
+    const proposalSheet = new Sheet(ellipsis, fileId);
+    return proposalSheet.update(Sheet.rangeFor('Proposal', 0, 1), [[name]]).then(() => fileId);
+  }).then(fileId => {
     const trackingSheet = new Sheet(ellipsis, ellipsis.env.TRIAL_PROPOSAL_PROGRESS_SHEET_ID);
     const sheetUrl = `https://docs.google.com/spreadsheets/d/${fileId}`;
     const submitter = new SlackUser(ellipsis.event.user.userIdForContext, ellipsis.event.user.userName);
