@@ -3,6 +3,9 @@ Good news! {successResult.reviewerLink} has approved your trial proposal:
 
 {sheetUrl}
 
+{if successResult.isComplete}
+Your proposal is now completely approved!
+{endif}
 {else}
 {successResult.reviewerLink} has rejected your trial proposal:
 
