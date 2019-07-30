@@ -1,4 +1,4 @@
-function(sheetUrl, reviewerText, status, ellipsis) {
+function(sheetUrl, reviewerText, status, isComplete, ellipsis) {
   const SlackUser = require('SlackUser');
 const reviewer = SlackUser.fromCellText(reviewerText);
 
@@ -8,6 +8,7 @@ const reason = reasonResult ? reasonResult[1] : "None given";
 ellipsis.success({
   reviewerLink: reviewer.link(),
   isApproved: isApproved,
-  reason: reason
+  reason: reason,
+  isComplete: isComplete
 });
 }

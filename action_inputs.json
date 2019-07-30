@@ -109,6 +109,16 @@
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
+  "exportId" : "p1N--uKeQeq7DxlTYSoJDA",
+  "name" : "isComplete",
+  "paramType" : {
+    "exportId" : "Yes/No",
+    "name" : "Yes/No"
+  },
+  "question" : "What is the value for `isComplete`?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
   "exportId" : "uiZEufggQZ6j__LUNmIh2Q",
   "name" : "reviewerText",
   "paramType" : {
